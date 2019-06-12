@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Calculadora Financeira</string>
+    <string-array name="spinner">
+        <item>Dia</item>
+        <item>Mês</item>
+        <item>Ano</item>
+    </string-array>
+    <string-array name="spinner_juros_tipo">
+        <item>Simples</item>
+        <item>Composto</item>
+    </string-array>
+    <string-array name="spinner_desconto_tipo">
+        <item>Comercial</item>
+        <item>Racional</item>
+    </string-array>
+    <string-array name="spinner_financiamento">
+        <item>Tabela Price</item>
+        <item>Tabela SAC</item>
+    </string-array>
+</resources>

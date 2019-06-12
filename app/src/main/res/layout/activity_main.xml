@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/abel"
+        android:text="Calculadora Financeira"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="230dp"
+        android:layout_height="2px"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/gradient_color_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_juros"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_width="150dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/yellow"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/contrail_one"
+            android:text="Juros"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50121653" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.26" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_desconto"
+        android:layout_width="150dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/red"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/contrail_one"
+            android:text="Desconto"
+            android:textColor="@android:color/white"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_financiamento"
+        android:layout_width="332dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/green"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_juros">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/contrail_one"
+            android:text="Financiamento"
+            android:textColor="@android:color/white"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
