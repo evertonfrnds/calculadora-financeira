@@ -41,9 +41,11 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/id_jr_valor_p"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Valor Presente"
+            android:digits="0123456789."
             android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
 
@@ -75,9 +77,11 @@
             tools:layout_editor_absoluteY="191dp">
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/id_tx_juros"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Taxa Juros"
+                android:digits="0123456789."
                 android:inputType="number" />
 
         </android.support.design.widget.TextInputLayout>
@@ -129,6 +133,7 @@
             tools:layout_editor_absoluteY="191dp">
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/id_jrs_tempo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Tempo"
@@ -175,15 +180,16 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/id_jrs_valor_f"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Valor Futuro
-"
+            android:hint="Valor Futuro"
+            android:digits="0123456789."
             android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_cal_juros"
         android:layout_width="199dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
