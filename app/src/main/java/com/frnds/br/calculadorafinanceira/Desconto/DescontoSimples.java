@@ -7,8 +7,7 @@ public class DescontoSimples extends Desconto {
         return desconto;
     }
     public float valor_nominal_c(){
-        float valor_nominal = this.valor_atual / (1 - this.taxa * this.tempo);
-        return valor_nominal;
+        return  this.valor_atual / (1 - (this.taxa * this.tempo));
     }
     public float valor_atual_c(){
         float valor_atual = this.valor_nominal * (1 - this.taxa * this.tempo);
@@ -23,9 +22,9 @@ public class DescontoSimples extends Desconto {
         return tempo;
     }
     //RACIONAL
+
     public float desconto_r() {
-        float desconto = this.desconto_c() / (1+ (this.taxa * this.tempo));
-        return desconto;
+        return valor_nominal - valor_atual_r();
     }
     public float valor_nominal_r(){
         return this.valor_atual * (1+ this.taxa * this.tempo);

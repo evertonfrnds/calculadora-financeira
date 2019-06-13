@@ -40,10 +40,11 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/ti_valor_nominl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Valor Nominal"
             android:digits="0123456789."
+            android:hint="Valor Nominal"
             android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
 
@@ -75,6 +76,7 @@
             tools:layout_editor_absoluteY="191dp">
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/ti_tx_juros_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:digits="0123456789."
@@ -130,9 +132,10 @@
             tools:layout_editor_absoluteY="191dp">
 
             <android.support.design.widget.TextInputEditText
+                android:id="@+id/ti_tempo_desc"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
 
+                android:layout_height="wrap_content"
                 android:hint="Tempo"
                 android:inputType="number" />
 
@@ -177,15 +180,16 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/ti_valor_atual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Valor com Desconto"
             android:digits="0123456789."
+            android:hint="Valor com Desconto"
             android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_cal_desc"
         android:layout_width="199dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

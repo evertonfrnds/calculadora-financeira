@@ -43,7 +43,7 @@ public class CalcularJuros {
                 jurosSimples.setTempo(convertTm(vl_tem));
             }
             result = jurosSimples.taxa()*100;
-            dialogJuros = new DialogJuros(context, "Valor da Taxa : " + df.format(result)+"%");
+            dialogJuros = new DialogJuros(context, "Taxa: " + df.format(result)+"%");
         }else if(tipo == 1){
             double result = 0;
             jurosComposto.setValor_presente(vl_p);
@@ -54,7 +54,7 @@ public class CalcularJuros {
                 jurosComposto.setTempo(convertTm(vl_tem));
             }
             result = jurosComposto.taxa()*100;
-            dialogJuros = new DialogJuros(context, "Valor da Taxa : " + df.format(result)+"%");
+            dialogJuros = new DialogJuros(context, "Taxa: " + df.format(result)+"%");
         }
     }
     public void calcularTempo(float vl_p, float vl_tx, float vl_fut){
@@ -70,7 +70,7 @@ public class CalcularJuros {
             }else{
                 jurosSimples.setTaxa(convertTx(vl_tx));
             }
-            dialogJuros = new DialogJuros(context, "Valor do tempo : " + df.format(jurosSimples.tempo()));
+            dialogJuros = new DialogJuros(context, "Tempo: " + df.format(jurosSimples.tempo()));
         }else if(tipo == 1){
             jurosComposto.setValor_presente(vl_p);
             jurosComposto.setValor_futuro(vl_fut);
@@ -79,7 +79,7 @@ public class CalcularJuros {
             }else{
                 jurosComposto.setTaxa(convertTx(vl_tx));
             }
-            dialogJuros = new DialogJuros(context, "Tempo : " + df.format(jurosComposto.tempo()));
+            dialogJuros = new DialogJuros(context, "Tempo: " + df.format(jurosComposto.tempo()));
         }
     }
     public void calcularValorPresente(float vl_tem, float vl_tx, float vl_fut){
@@ -95,7 +95,7 @@ public class CalcularJuros {
                 jurosSimples.setTempo(convertTm(vl_tem));
             }
             result = jurosSimples.valorPresente();
-            dialogJuros = new DialogJuros(context, "Valor Presente : " + df.format(result));
+            dialogJuros = new DialogJuros(context, "Valor Presente: " + df.format(result));
         }else if(tipo == 1){
             double result = 0;
             jurosComposto.setTaxa(vl_tx);
@@ -106,7 +106,7 @@ public class CalcularJuros {
                 jurosComposto.setTempo(convertTm(vl_tem));
             }
             result = jurosComposto.valorPresente();
-            dialogJuros = new DialogJuros(context, "Valor Presente : " + df.format(result));
+            dialogJuros = new DialogJuros(context, "Valor Presente: " + df.format(result));
         }
     }
     public void calcularValorFuturo(float vl_p, float vl_tx, float vl_tem){
@@ -120,8 +120,8 @@ public class CalcularJuros {
             }else{
                 jurosSimples.setTempo(convertTm(vl_tem));
             }
-            dialogJuros = new DialogJuros(context, "Valor Futuro : " + df.format(jurosSimples.valorFuturo())+"" +
-                    "\nJuros : " +df.format(jurosSimples.juros()) );
+            dialogJuros = new DialogJuros(context, "Valor Futuro: " + df.format(jurosSimples.valorFuturo())+"" +
+                    "\nJuros : " +df.format(jurosSimples.juros()));
         }else if(tipo == 1){
             jurosComposto.setValor_presente(vl_p);
             jurosComposto.setTaxa(vl_tx);
@@ -130,12 +130,12 @@ public class CalcularJuros {
             }else{
                 jurosComposto.setTempo(convertTm(vl_tem));
             }
-            dialogJuros = new DialogJuros(context, "Valor Futuro : " + df.format(jurosComposto.valorFuturo())+"" +
+            dialogJuros = new DialogJuros(context, "Valor Futuro: " + df.format(jurosComposto.valorFuturo())+"" +
                     "\nJuros : " +df.format(jurosComposto.juros()));
         }
     }
     public void erro(){
-        dialogJuros = new DialogJuros(context, "Erro");
+        dialogJuros = new DialogJuros(context, "Erro, verifique se deixou algum campo não preenchido para exibir o resultado!");
     }
 
     private float convertTx(float taxa){
